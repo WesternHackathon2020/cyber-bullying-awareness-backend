@@ -15,10 +15,6 @@ const csvArrayToMap = (array) => {
     return senderMap
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 exports.csvToMap = async (filename) => {
 
     const results = [];
