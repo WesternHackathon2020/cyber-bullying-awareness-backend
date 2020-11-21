@@ -30,4 +30,7 @@ api.get("/api/teachers/:id", teacherController.getTeachersById);
 const analyticsController = require('./controllers/analytics.controller');
 api.get('/api/process/:uuid', analyticsController.processClass);
 
+const generateController = require('./controllers/generate.controller');
+api.get('/admin/generate/data', generateController.generate)
+
 module.exports = api;

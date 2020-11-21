@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "123456789",
+    "className": "Math",
+    "email": "edna.krabappel@gmail.com"
+  },
+  {
+    "uuid": "234567890",
+    "className": "English",
+    "email": "edna.krabappel@gmail.com"
+  },
+  {
+    "uuid": "345678901",
+    "className": "Science",
+    "email": "edna.krabappel@gmail.com"
+  }
+]
