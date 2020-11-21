@@ -9,7 +9,7 @@ const csvArrayToMap = (array) => {
         message.MESSAGE = message.MESSAGE.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
         message.MESSAGE += '.'
         senderMap[i] = array[i]
-        senderMap[i].ORIGINAL = originalMessage
+        senderMap[i].ORIGINAL_MESSAGE = originalMessage
     }
     return senderMap
 }

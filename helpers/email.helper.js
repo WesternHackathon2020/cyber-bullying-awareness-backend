@@ -4,7 +4,7 @@ const EMAIL = process.env.EMAIL
 const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD
 const HOST = process.env.HOST
 
-const sendEmail = async (participantIndex, course, teacher, hasFlaggedMessages) => {
+exports.sendEmail = async (course, teacher, hasFlaggedMessages) => {
     const transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
         port: '465',
