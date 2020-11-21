@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 const mongoURL = process.env.DB_URL;
-mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: false }).catch((err)=>{
+mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true }).catch((err)=>{
     console.log(err);
 });
 let db = mongoose.connection;
@@ -21,10 +21,5 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: false}));
 
 app.use(logger('dev'));
-
-//Routers
-
-//Routes
-
 
 module.exports = app;

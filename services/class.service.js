@@ -1,6 +1,6 @@
 const Class = require('../models/flagged.model');
 
-module.exports.flagContent = async ({uuid, teacherName, className}) => {
+module.exports.createClass = async ({uuid, teacherName, className}) => {
   let object = {uuid, teacherName, className};
   return await Class.create(object);
 };

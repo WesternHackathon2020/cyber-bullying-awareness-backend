@@ -17,6 +17,10 @@ module.exports.getAllFlagged = async (query) => {
   return await Flagged.find(query);
 };
 
+module.exports.getFlaggedByClassUUId = async (uuid) => {
+  return await Flagged.find({classId: uuid});
+};
+
 module.exports.getFlaggedById = async (id) => {
   return await Flagged.findById(id);
 };
