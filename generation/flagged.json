@@ -1,0 +1,86 @@
+[
+  {
+    "type": "TEXT",
+    "studentName": "johnA",
+    "contentText": "I hate this course. I don't even know what I am here.",
+    "roomRecorded": "Personal",
+    "messageTo": "nathanH"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "johnA",
+    "contentText": "Lets ignore Jake from now on he is annoying! He is stupid!!!",
+    "roomRecorded": "Bully group chat",
+    "messageTo": "Bully group chat"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "johnA",
+    "contentText": "This blows!!!",
+    "roomRecorded": "Personal",
+    "messageTo": "nathanH"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "johnA",
+    "contentText": "I hate this course.",
+    "roomRecorded": "Other Bully Group Chat",
+    "messageTo": "nathanH"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "johnA",
+    "contentText": "I hate this course.",
+    "roomRecorded": "Personal",
+    "messageTo": "tristanH"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "tristanH",
+    "contentText": "Man I am way too smart for this course I should just skip it all.",
+    "roomRecorded": "Personal",
+    "messageTo": "johnA"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "tristanH",
+    "contentText": "I never want to see Jane again she is way too annoying for her to be friends with us.",
+    "roomRecorded": "Personal",
+    "messageTo": "johnA"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "tristanH",
+    "contentText": "Never talking to that annoying person again! They never stop talking it just makes me so angry!",
+    "roomRecorded": "Personal",
+    "messageTo": "nathanH"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "tristanH",
+    "contentText": "Never talking to that annoying person again! They never stop talking it just makes me so angry!",
+    "roomRecorded": "Personal",
+    "messageTo": "nathanH"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "nathanH",
+    "contentText": "Man she is so stupid!",
+    "roomRecorded": "Personal",
+    "messageTo": "johnA"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "johnA",
+    "contentText": "Wow this is so stupid.",
+    "roomRecorded": "Bully Group Chat",
+    "messageTo": "Bully Group Chat"
+  },
+  {
+    "type": "TEXT",
+    "studentName": "taylorG",
+    "contentText": "I want to go home!",
+    "roomRecorded": "Personal",
+    "messageTo": "nathanH"
+  }
+]

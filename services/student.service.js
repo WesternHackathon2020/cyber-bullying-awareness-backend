@@ -1,7 +1,7 @@
 const Student = require('../models/student.model');
 
-module.exports.createStudent = async ({name, courseId}) => {
-  let object = {flaggedCount: 0, name, courseId};
+module.exports.createStudent = async ({name, courseId, flaggedCount}) => {
+  let object = {flaggedCount: flaggedCount || 0, name, courseId};
   return await Student.create(object);
 };
 

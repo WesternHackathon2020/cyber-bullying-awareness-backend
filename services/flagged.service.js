@@ -1,7 +1,7 @@
 const Flagged = require('../models/flagged.model');
 
-module.exports.flagContent = async ({name, courseId, studentId, studentName, text, roomRecorded, timeSubmitted, type}) => {
-  let object = {name, courseId, studentId, studentName, text, roomRecorded, timeSubmitted, type};
+module.exports.flagContent = async ({courseId, studentId, studentName, text, roomRecorded, timeSubmitted, type, messageTo}) => {
+  let object = {courseId, studentId, studentName, contentText: text, roomRecorded, timeSubmitted, type, messageTo};
   return await Flagged.create(object);
 };
 
