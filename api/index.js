@@ -7,11 +7,11 @@ const api = express.Router();
 // TEST
 api.get("/api/", (req, res)=>res.send("Cyber Bully Detector (CBD)"));
 
-// Class
-const classController = require("./controllers/class.controller");
-api.get("/api/class/getClasses", classController.getClasses);
-api.get("/api/class/getClassByUUId/:uuid", classController.getClassByUUId);
-api.get("/api/class/getStudentsInClass/:uuid", classController.getStudentsInClass);
+// Course
+const classController = require("./controllers/course.controller");
+api.get("/api/class/getCoursees", classController.getCoursees);
+api.get("/api/class/getCourseByUUId/:uuid", classController.getCourseByUUId);
+api.get("/api/class/getStudentsInCourse/:uuid", classController.getStudentsInCourse);
 api.get("/api/class/getFlaggedContentByUUId/:uuid", classController.getFlaggedContentByUUId);
 
 // Students

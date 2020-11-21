@@ -1,4 +1,3 @@
-const classService = require("../../services/class.service");
 const studentService = require("../../services/student.service");
 
 module.exports.getStudents = async (req, res, next) => {
