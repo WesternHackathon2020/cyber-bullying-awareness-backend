@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ClassSchema = new Schema({
-    uuid: String,
+    uuid: {type: String, unique: true},
     teacherName: String,
     className: String,
 });
