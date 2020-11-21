@@ -2,12 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const FlaggedSchema = new Schema({
-    username : String,
-    timeSubmitted : Date,
     type: {type: String, enum: ["AUDIO", "TEXT"], default: "TEXT"},
-    value: String,
     classId: {type: mongoose.Schema.ObjectId, ref: ('Class'), required: true},
-    roomRecorded: String,
+    studentId: {type: mongoose.Schema.ObjectId, ref: ('Student'), required: true},
+    studentName : {type: String, required: true},
+    
+    contentText: {type: String},
+    contentText: {type: String},
+    timeSubmitted: {type: Date, default: Date.now},
+    roomRecorded: {type: String},
+    
 });
 
 module.exports = mongoose.model('Flagged', FlaggedSchema);
