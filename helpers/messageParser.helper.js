@@ -1,5 +1,6 @@
 const csv = require('csv-parser')
 const fs = require('fs')
+require('dotenv').config()
 
 const csvArrayToMap = (array) => {
     const senderMap = {}
@@ -23,7 +24,7 @@ exports.csvToMap = async (filename) => {
     const results = [];
 
     return new Promise((resolve, reject) => {
-        fs.createReadStream(`../cyber-bullying-awareness-backend/temp/${filename}`)
+        fs.createReadStream(`../${process.env.FOLDER_NAME}/temp/${filename}`)
             .pipe(csv())
             .on('data', (data) => results.push(data))
             .on('end', async () => {
