@@ -22,9 +22,8 @@ exports.csvToMap = async (filename) => {
 
     const results = [];
 
-    await sleep(5000)
     return new Promise((resolve, reject) => {
-        fs.createReadStream(`../temp/${filename}`)
+        fs.createReadStream(`../cyber-bullying-awareness-backend/temp/${filename}`)
             .pipe(csv())
             .on('data', (data) => results.push(data))
             .on('end', async () => {
