@@ -30,6 +30,7 @@ const insertMessages = async (course, username, messages) => {
             contentText: message.ORIGINAL_MESSAGE,
             timeSubmitted: message.TIMESTAMP,
             roomRecorded: message.ROOM_RECORDED,
+            messageTo: message.MESSAGE_TO
         })
     }
 
