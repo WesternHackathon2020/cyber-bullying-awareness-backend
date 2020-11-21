@@ -1,4 +1,4 @@
-const Course = require('../models/flagged.model');
+const Course = require('../models/course.model');
 
 module.exports.createCourse = async ({uuid, teacherId, className}) => {
   let object = {uuid, teacherId, className};

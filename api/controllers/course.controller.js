@@ -1,10 +1,10 @@
-const classService = require("../../services/course.service");
+const courseService = require("../../services/course.service");
 const studentService = require("../../services/student.service");
 const flaggedService = require("../../services/flagged.service");
 
 module.exports.getCourses = async (req, res, next) => {
 	try {
-		return res.json(await classService.getAllCourses(req.query));
+		return res.json(await courseService.getAllCourses(req.query));
 	}
 	catch(error){
 		console.error(error);
@@ -14,7 +14,7 @@ module.exports.getCourses = async (req, res, next) => {
 
 module.exports.getCourseByUUId = async (req, res, next) => {
 	try {
-		const object = await classService.getCourseByUUId(req.params.uuid);
+		const object = await courseService.getCourseByUUId(req.params.uuid);
 		return res.json(object);
 	}
 	catch(error){
@@ -42,5 +42,18 @@ module.exports.getFlaggedContentByUUId = async (req, res, next) => {
 	catch(error){
 		console.error(error);
 		return res.sendStatus(400).send(error);
+	}
+}
+
+module.exports.getTeachersCourses = async (req,res) => {
+	try{
+		const course = await courseService.getCourseByUUId(req.params.uuid);
+		const courses = await courseService.getAllCourses({teacherId: course.teacherId})
+
+		return res.json({courses})
+
+	}catch(error){
+		console.log(error)
+		return res.status(400).json({message:error})
 	}
 }

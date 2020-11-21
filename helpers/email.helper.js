@@ -4,7 +4,7 @@ const EMAIL = process.env.EMAIL
 const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD
 const HOST = process.env.HOST
 
-const sendEmail = async (participantIndex, course, teacher, hasFlaggedMessages) => {
+exports.sendEmail = async (course, teacher, hasFlaggedMessages) => {
     const transporter = nodeMailer.createTransport({
         host: 'smtp.gmail.com',
         port: '465',
@@ -16,7 +16,9 @@ const sendEmail = async (participantIndex, course, teacher, hasFlaggedMessages) 
         }
     })
 
-    const message = hasFlaggedMessages ? `Hello, ${teacher.name}, The class ${course.className} has flagged possible bullying. Please visit ${HOST}/${course.uuid}` : `Congratulations ${teacher.name}! Your class ${course.className} has no flagged messages today.`
+    const message = hasFlaggedMessages ? `Hello ${teacher.name}, CBD has flagged possible 
+    occurrences of bullying in your class ${course.className}. Please visit ${HOST}/${course.uuid} to review these messages.`
+        : `Hello ${teacher.name}! Your class ${course.className} has no flagged messages today.`
 
     const mailOptions = {
         from: EMAIL,

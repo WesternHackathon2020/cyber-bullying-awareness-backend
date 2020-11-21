@@ -9,17 +9,21 @@ const csvArrayToMap = (array) => {
         message.MESSAGE = message.MESSAGE.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
         message.MESSAGE += '.'
         senderMap[i] = array[i]
-        senderMap[i].ORIGINAL = originalMessage
+        senderMap[i].ORIGINAL_MESSAGE = originalMessage
     }
     return senderMap
 }
 
-const csvToMap = async (filename) => {
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+exports.csvToMap = async (filename) => {
 
     const results = [];
 
     return new Promise((resolve, reject) => {
-        fs.createReadStream(`../temp/${filename}`)
+        fs.createReadStream(`../cyber-bullying-awareness-backend/temp/${filename}`)
             .pipe(csv())
             .on('data', (data) => results.push(data))
             .on('end', async () => {
