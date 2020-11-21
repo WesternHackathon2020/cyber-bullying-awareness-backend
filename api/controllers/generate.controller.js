@@ -1,4 +1,4 @@
-const teacher = require('../../generation/teacher.json')
+const teacherObject = require('../../generation/teacher.json')
 const flaggedMessages = require('../../generation/flagged.json')
 const students = require('../../generation/students.json')
 const courses = require('../../generation/courses.json')
@@ -10,7 +10,7 @@ const flaggedService = require('../../services/flagged.service')
 module.exports.generate = async (req,res,next) => {
     try {
         //Generate teacher
-        const teacher = await teacherService.createTeacher({name: teacher.name, email: teacher.email})
+        const teacher = await teacherService.createTeacher({name: teacherObject.name, email: teacherObject.email})
 
         if (!teacher) {
             console.log(error)
@@ -44,17 +44,14 @@ module.exports.generate = async (req,res,next) => {
             }
             studentModels.push(await studentService.createStudent({
                 name: student.name,
-                courseId: courseModels[random].id
-            }))
-            studentModels.push(await studentService.createStudent({
-                name: student.name,
-                courseId: courseModels[random2].id
+                courseIds: [courseModels[random].id, courseModels[random2].id]
             }))
         }
 
         //Generate Flagged
         for (const flagged of flaggedMessages) {
             const student = studentModels.filter((student) => student.name === flagged.studentName)[0]
+            console.log(student)
             let random = Math.floor(Math.random() * 2)
             await flaggedService.flagContent({
                 studentId: student.id,
