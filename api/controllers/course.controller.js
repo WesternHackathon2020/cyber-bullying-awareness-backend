@@ -3,7 +3,6 @@ const studentService = require("../../services/student.service");
 const flaggedService = require("../../services/flagged.service");
 
 module.exports.getCourses = async (req, res, next) => {
-
 	try {
 		return res.json(await classService.getAllCourses(req.query));
 	}
