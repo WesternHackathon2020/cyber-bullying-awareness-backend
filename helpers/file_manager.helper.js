@@ -10,3 +10,7 @@ exports.downloadFile = async (storage, srcFilename, destFilename) => {
         `gs://${bucketName}/${srcFilename} downloaded to ${destFilename}.`
     );
 }
+
+exports.deleteFromBucket = async () => {
+
+}

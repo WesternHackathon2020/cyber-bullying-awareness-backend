@@ -14,10 +14,15 @@ const csvArrayToMap = (array) => {
     return senderMap
 }
 
-const csvToMap = async (filename) => {
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+exports.csvToMap = async (filename) => {
 
     const results = [];
 
+    await sleep(5000)
     return new Promise((resolve, reject) => {
         fs.createReadStream(`../temp/${filename}`)
             .pipe(csv())

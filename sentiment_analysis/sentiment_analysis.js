@@ -2,16 +2,18 @@ const path = require('path');
 const {Storage} = require('@google-cloud/storage');
 const language = require('@google-cloud/language');
 const {downloadFile} = require('../helpers/file_manager.helper');
+const {csvToMap} = require('../helpers/messageParser.helper');
 
-
-const analyzeCourse = async (courseUuid) => {
+exports.analyzeCourse = async (courseUuid) => {
     const storage = new Storage();
     const client = new language.LanguageServiceClient();
     const destFilename = path.join(__dirname, '../temp/', courseUuid.concat('.csv'))
 
     await downloadDumpedFiles(storage, courseUuid, destFilename)
-    //process csv
+    console.log("Dumped them")
 
+    //process csv
+    const messageMap = await csvToMap(courseUuid.concat('.csv'))
 
     return analyzeMessages(client, messageMap)
 }
