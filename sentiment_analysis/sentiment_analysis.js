@@ -20,7 +20,7 @@ const downloadDumpedFiles = async (storage, courseUuid, destFilename) => {
     let srcFilename = 'RAW/'.concat(courseUuid).concat('/1605933923/PLAIN_TEXT.csv')
 
     await downloadFile(storage, srcFilename, destFilename)
-
+}
 
 const analyzeMessages = async (client, messageMap) => {
     let message = ''
@@ -48,6 +48,3 @@ const analyzeMessages = async (client, messageMap) => {
     }
     return flaggedMessageMap
 }
-
-// analyzeCourse('0480e11c-f80a-4a2f-a376-fe282ef9bc71')
-analyzeMessages(new language.LanguageServiceClient(), 'asdf')
