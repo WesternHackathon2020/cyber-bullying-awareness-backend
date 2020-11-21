@@ -13,6 +13,7 @@ api.get("/api/class/getCourses", classController.getCourses);
 api.get("/api/class/getCourseByUUId/:uuid", classController.getCourseByUUId);
 api.get("/api/class/getStudentsInCourse/:uuid", classController.getStudentsInCourse);
 api.get("/api/class/getFlaggedContentByUUId/:uuid", classController.getFlaggedContentByUUId);
+api.get("/api/class/getCoursesForTeacher/:uuid",classController.getTeachersCourses);
 
 // Students
 const studentController = require("./controllers/student.controller");
