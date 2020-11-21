@@ -27,6 +27,6 @@ api.get('/api/teachers/', teacherController.getTeachers);
 api.get("/api/teachers/:id", teacherController.getTeachersById);
 
 const analyticsController = require('./controllers/analytics.controller');
-api.post('/api/process/:uuid', analyticsController.processClass);
+api.get('/api/process/:uuid', analyticsController.processClass);
 
 module.exports = api;
