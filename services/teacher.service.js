@@ -18,5 +18,5 @@ module.exports.getTeachers = async (query) => {
 };
 
 module.exports.getTeacherById = async (id) => {
-  return await Teacher.findOne({id});
+  return await Teacher.findById(id);
 };
