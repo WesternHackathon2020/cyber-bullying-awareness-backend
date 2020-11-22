@@ -14,8 +14,8 @@ const studentController = require("./controllers/student.controller");
 api.get("/api/class/getCourses", classController.getCourses);
 api.get("/api/class/getCourseByUUId/:uuid", classController.getCourseByUUId);
 api.get("/api/class/getStudentsInCourse/:uuid", classController.getStudentsInCourse);
-api.get("/api/class/getFlaggedContentByUUId/:uuid", classController.getFlaggedContentByUUId);
 api.get('/api/class/getFlaggedContentByCourseId/:id', studentController.getFlaggedContentByCourseId);
+api.get('/api/class/allFlagged', classController.getAllFlagged);
 api.get("/api/class/getCoursesForTeacher/:id",classController.getTeachersCourses);
 api.get('/api/flagged/:id', studentController.getFlaggedContentByCourseId)
 

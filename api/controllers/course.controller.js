@@ -34,9 +34,9 @@ module.exports.getStudentsInCourse = async (req, res, next) => {
 	}
 }
 
-module.exports.getFlaggedContentByUUId = async (req, res, next) => {
+module.exports.getAllFlagged = async (req, res, next) => {
 	try {
-		const flaggedContent = await flaggedService.getFlaggedByCourseUUId(req.params.uuid);
+		const flaggedContent = await flaggedService.getAllFlagged();
 		return res.json(flaggedContent);
 	}
 	catch(error){

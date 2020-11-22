@@ -18,5 +18,5 @@ module.exports.getStudents = async (query) => {
 };
 
 module.exports.getStudentById = async (id) => {
-  return await Student.findOne({id});
+  return await Student.findById(id);
 };
