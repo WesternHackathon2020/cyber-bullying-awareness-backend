@@ -14,7 +14,7 @@ api.get("/api/class/getCourseByUUId/:uuid", classController.getCourseByUUId);
 api.get("/api/class/getStudentsInCourse/:uuid", classController.getStudentsInCourse);
 api.get("/api/class/getFlaggedContentByUUId/:uuid", classController.getFlaggedContentByUUId);
 api.get('/api/class/getFlaggedContentByCourseId/:id', studentController.getFlaggedContentByCourseId)
-api.get("/api/class/getCoursesForTeacher/:uuid",classController.getTeachersCourses);
+api.get("/api/class/getCoursesForTeacher/:id",classController.getTeachersCourses);
 api.get('/api/flagged/:id', studentController.getFlaggedContentByCourseId)
 
 // Students
