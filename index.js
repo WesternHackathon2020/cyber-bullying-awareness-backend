@@ -8,22 +8,7 @@ require('dotenv').config();
 
 const app = express();
 // app.use(cors());
-app.use(cors({
-    origin: [
-      'http://localhost:9080',
-      'https://localhost:3000',
-      'http://192.168.1.167:9080',
-      'http://192.168.1.167:3000',
-      'http://192.168.0.121:3000',
-      'http://192.168.0.121:9080',
-  
-      'http://localhost:8000',
-      'http://192.168.0.121:8000',
-      '*',
-    ],
-    credentials: true,
-    exposedHeaders: ['set-cookie']
-  }));
+app.use(cors());
 
   
 const mongoURL = process.env.DB_URL;
