@@ -47,9 +47,9 @@ module.exports.getFlaggedContentByUUId = async (req, res, next) => {
 
 module.exports.getTeachersCourses = async (req,res) => {
 	try{
-		const courses = await courseService.getAllCourses({teacherId: req.params.id})
+		const courses = await courseService.getAllCourses({teacherId: req.params.id});
 
-		return res.json({courses})
+		return res.json(courses);
 
 	}catch(error){
 		console.log(error)
