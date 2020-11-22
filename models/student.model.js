@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
     flaggedCount: {type: Number, default: 0},
-    courseId: {type: mongoose.Schema.ObjectId, ref: ('Course'), required: true},
+    courseIds: [String],
     name: String,
 });
 

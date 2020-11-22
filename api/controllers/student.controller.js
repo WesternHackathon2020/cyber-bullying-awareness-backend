@@ -32,3 +32,13 @@ module.exports.getFlaggedContentByStudentId = async (req,res) => {
 		return res.status(400).json({message : error});
 	}
 }
+
+module.exports.getFlaggedContentByCourseId = async (req,res) => {
+	try{
+		const flagged = await flaggedService.getFlaggedByCourseUUId(req.params.id);
+		return res.json(flagged);
+	}catch(error){
+		console.log(error);
+		return res.status(400).json({message : error});
+	}
+}

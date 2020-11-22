@@ -9,7 +9,7 @@ const FlaggedSchema = new Schema({
     contentText: {type: String},
     timeSubmitted: {type: Date, default: Date.now},
     roomRecorded: {type: String},
-    
+    messageTo: String
 });
 
 module.exports = mongoose.model('Flagged', FlaggedSchema);

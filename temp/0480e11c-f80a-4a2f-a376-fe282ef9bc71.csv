@@ -1,5 +1,10 @@
-SENDER,TO,TIMESTAMP,MESSAGE
-ehutnik,MAIN_CHAT,1605934000,"""hello everyone!"""
-ehutnik,BREAKOUT_ROOM,1605934200,"""I hate this so much"""
-ehutnik,whutchinson,1605934250,"""I really love this course!"""
-whutchinson,iballah,1605934350,"""insert racial comment"""
+SENDER,TO,TIMESTAMP,MESSAGE,TYPE
+johnA,MAIN_CHAT,1605934000,"""hello everyone!""","TEXT"
+johnA,MAIN_CHAT,1605934001,"""i don't like everyone!""","TEXT"
+johnA,MAIN_CHAT,1605934002,"""betty smells!""","TEXT"
+rachelH,BREAKOUT_ROOM,1605934200,"""I hate this !!so much""","TEXT"
+rachelH,BREAKOUT_ROOM,1605934201,"""I wish John wasn't here he is the worst""","TEXT"
+rachelH,BREAKOUT_ROOM,1605934202,"""Betty is ugly ew!""","TEXT"
+rachelH,johnA,1605934203,"""I hate hate hate this !!so much""","TEXT"
+johnA,nathanH,1605934250,"""I really love .this course!""","TEXT"
+tracyG,bettyL,1605934350,"""This is really fun""","TEXT"

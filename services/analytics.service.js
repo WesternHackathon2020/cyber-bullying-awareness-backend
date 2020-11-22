@@ -19,9 +19,9 @@ flaggedMap : {
 const insertMessages = async (course, username, messages) => {
     const student = await Student.findOne({name: username})
 
-    student.flaggedCount += messages.length
+    student.flaggedCount += messages.size
 
-    for(const message of messages){
+    for(const message of Array.from(messages)){
         await Flagged.create({
             type: message.TYPE,
             courseId: course.id,
@@ -30,6 +30,7 @@ const insertMessages = async (course, username, messages) => {
             contentText: message.ORIGINAL_MESSAGE,
             timeSubmitted: message.TIMESTAMP,
             roomRecorded: message.ROOM_RECORDED,
+            messageTo: message.TO
         })
     }
 
@@ -40,8 +41,6 @@ const insertMessages = async (course, username, messages) => {
 module.exports.addFlaggedItems = async (course, flaggedMap) => {
     for(const username in flaggedMap){
         const messages = flaggedMap[username]
-        if(messages.length > 0){
-            await insertMessages(course, username, messages)
-        }
+        await insertMessages(course, username, messages)
     }
 };

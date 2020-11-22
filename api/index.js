@@ -20,6 +20,7 @@ const studentController = require("./controllers/student.controller");
 api.get("/api/students/", studentController.getStudents);
 api.get("/api/students/:id", studentController.getStudentsByUUId);
 api.get('/api/students/flagged/:id', studentController.getFlaggedContentByStudentId)
+api.get('/api/flagged/:id', studentController.getFlaggedContentByCourseId)
 
 
 const teacherController = require('./controllers/teacher.controller');
@@ -28,5 +29,8 @@ api.get("/api/teachers/:id", teacherController.getTeachersById);
 
 const analyticsController = require('./controllers/analytics.controller');
 api.get('/api/process/:uuid', analyticsController.processClass);
+
+const generateController = require('./controllers/generate.controller');
+api.get('/admin/generate/data', generateController.generate)
 
 module.exports = api;
